@@ -1,0 +1,35 @@
+from collections import deque
+
+def water_jug_path(jug1, jug2, target):
+    visited = set()
+    queue = deque()
+    queue.append((0, 0, [(0, 0)]))   # (jug1, jug2, path)
+
+    while queue:
+        a, b, path = queue.popleft()
+
+        if (a, b) in visited:
+            continue
+        visited.add((a, b))
+
+        if a == target or b == target:
+            return path
+        queue.append((a, jug2, path + [(a, jug2)]))
+        queue.append((jug1, b, path + [(jug1, b)]))
+        queue.append((0, b, path + [(0, b)]))
+        queue.append((a, 0, path + [(a, 0)]))
+        pour = min(a, jug2 - b)
+        queue.append((a - pour, b + pour, path + [(a - pour, b + pour)]))
+        pour = min(jug1 - a, b)
+        queue.append((a + pour, b - pour, path + [(a + pour, b - pour)]))
+
+    return None
+jug1 = 4
+jug2 = 3
+target = 2
+
+result = water_jug_path(jug1, jug2, target)
+
+print("Path of states by jugs followed is :")
+for state in result:
+    print(state[0], ",", state[1])
