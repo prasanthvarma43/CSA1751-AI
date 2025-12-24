@@ -1,0 +1,23 @@
+X = [[0,0],[0,1],[1,0],[1,1]]
+y = [0, 0, 0, 1]
+
+w1 = w2 = b = 0
+lr = 0.1
+
+# training
+for epoch in range(10):
+    for i in range(4):
+        x1, x2 = X[i]
+        output = x1*w1 + x2*w2 + b
+        pred = 1 if output >= 0 else 0
+        error = y[i] - pred
+
+        w1 += lr * error * x1
+        w2 += lr * error * x2
+        b  += lr * error
+
+# testing
+print("Testing Neural Network")
+for x in X:
+    result = 1 if (x[0]*w1 + x[1]*w2 + b) >= 0 else 0
+    print(x, "=>", result)
