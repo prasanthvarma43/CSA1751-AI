@@ -1,0 +1,175 @@
+```css
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+
+/* Header */
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Navigation */
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+
+/* Sections */
+
+section {
+    background-color: white;
+    width: 80%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+/* Headings */
+
+h2 {
+    color: #003366;
+    text-align: center;
+}
+
+
+/* Home */
+
+.home {
+    text-align: center;
+    padding: 50px;
+}
+
+.home p {
+    font-size: 18px;
+}
+
+
+/* Form */
+
+form {
+    width: 70%;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+
+/* PNR */
+
+#pnr {
+    text-align: center;
+}
+
+#pnr input {
+    width: 60%;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    section {
+        width: 95%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+```
